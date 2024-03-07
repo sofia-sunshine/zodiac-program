@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-image: url(chinese2.jpg);
+            background-size: 2000px;
+            
+        }
+    
+        .zod {
+                max-width: 50%;
+                display: block;
+                align-items: center;
+                margin: 0 auto;
+            }
+        h2, p{
+             color: #ffd000;
+             text-align: center;
+             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            
+            }
+             
+        #demo0{
+            text-decoration: underline;
+            color: #ffeeee;
+        }
+
+        #demo1{
+            background-color: #ffeeee;
+            color: #cb040b; 
+            padding: auto;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 5px;
+            border-style: dotted;
+        }
+        #demo2 {
+            font-size: 14px;
+        }
+
+        .content{
+            border-color: #ffd000;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 10px; 
+            width: 300px;
+            padding: 75px;
+            margin-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url(bg.png); 
+            background-size: 450px;
+            align-items: center;
+            box-shadow: 5px 5px 30px #ffd000;
+        
+            }
+      button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background: #f8f1f1;
+                border-radius: 5px;
+                cursor: pointer;
+                border-style: none ;
+            }
+        #pic {
+                max-width: 35%;
+                display: none;
+                align-items: center;
+                margin: 0 auto;
+        }
+    </style>
+<script>
+
+function zodiacimg(x){
+
+var zodimg = ["ox.png"]
+
+x =x-1900;
+x=x%12;
+document.getElementById("zodimg").src = zodimg[x];
+}
+
+function zodiacsign(x){
+
+var zodsign = ["Rat 鼠  ", "Ox 牛", "Tiger 虎","Rabbit 兔","Dragon 龍","Snake 蛇","Horse 馬 / 马","Goat 羊","Monkey 猴","Rooster 雞 / 鸡","Dog 狗","Pig 豬 / 猪 "];
+var meaning = ["Rats are quick-witted, resourceful, and smart but lack courage. With rich imaginations and sharp observations, they can take advantage of various opportunities well. In Chinese culture, rats represent working diligently and thriftiness, so people born in a Rat year are thought to be wealthy and prosperous.",
+"They are hardworking people, who can work for a very long time compared to other people. Without being tired and without any complaint, the ox is independent; they need to have peaceful and quiet place to work. Even though they are not talkative, they are very reliable and supportive of the people around them.",
+"Noble and Fearless, Tigers are respected for their courage, even from those working against them. Tiger people are daring fighters, they are capable of standing up to the better end for what they think is right. Although they could be selfish from time to time in the little things, they are capable of great generosity.",
+"Rabbits are predicted to be gentle, quiet, elegant, and alert as well as quick, skillful, kind, patient, and very responsible, sometimes reluctant to reveal their minds to others and having a tendency to escape reality, but always faithful to those around them.",
+"Gifted with innate courage, tenacity, and intelligence, Dragons are enthusiastic and confident. They are not afraid of challenges, and willing to take risks. However, Dragons are sometimes regarded as aggressive, and angry Dragons are not open to criticism.",
+"Most of time, Snake personality is nonchalant, but they are actually enthusiastic. They are romantic, decent and sophisticated, and also eloquent, which makes them humorous. People will feel comfortable and relaxed when talking with them.",
+"Power, beauty, and freedom symbolize the horse in the Chinese culture. People born in the year of the horse are very high-spirited, active and energetic. Their enthusiasm and cheerful personalities make people like them.",
+"In China, the goat symbolizes peace and prosperity. People in this year are soft, creative, and artistic. They do tend to be shy and reserved, but they can stand up for themselves.",
+"People born in a year of the Monkey have magnetic personalities and are witty and intelligent. Personality traits like mischievousness, curiosity, and cleverness make them very naughty. Monkeys are masters of practical jokes, because they like playing most of the time.",
+"Self-consistent, outgoing, skillful. They are deep thinkers and the Roosters' personality is considered to be honest, bright, communicative, ambitious, capable and warm-hearted. Strong self-respect and seldom relying on others are their basic characteristics.",
+"People born in the year of the Dog may be endowed with some lovely dog personality traits: honest, amiable, kind, cautious, prudent, loyal, reliable, considerate, understanding, patient, hard-working, and sincere. Dogs are always ready to help others.",
+"People born in a year of the Pig are usually self-disciplined, straightforward, gentle, calm, quick in mind, and thirsty for knowledge. Among the twelve Chinese zodiac signs, the Pig enjoys the best luck with money. No matter what jobs they do, they have a higher possibility of being successful."];
+var zodimg = ["rat.png","ox.png","tiger.png","rabbit.png","dragon.png","snake.png", "horse.png", "goat.png","monkey.png","rooster.png","dog.png","pig.png"];
+
+x =x-1900;
+x=x%12;
+
+document.getElementById("demo0").innerHTML = "Your Chinese Zodiac is:";
+document.getElementById("zodimg").src = zodimg[x];
+document.getElementById("demo1").innerHTML = zodsign[x];
+document.getElementById("demo2").innerHTML = meaning[x];
+}
+
+
+
+
+</script>
+</head>
+
+<body>
+
+<div class="content">
+<h2>Chinese Zodiac Signs</h2>
+<p id="demo0"></p>
+<img src="chinesezod.png" class="zod" id="zodimg" alt="chinese zodiac wheel"/> 
+<p id="demo1"></p>
+<p id="demo2"></p>
+<br>
+<button type="button" onclick="zodiacsign('2003'), show()" id="btnID" >What is my Sign?</button>
+</div>
+
+</body>
+</html>
